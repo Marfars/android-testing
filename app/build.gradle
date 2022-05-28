@@ -59,7 +59,7 @@ dependencies {
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
-    implementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+    implementation "androidx.fragment:fragment-ktx:$fragmentVersion"
 
     // Other dependencies
     testImplementation "org.hamcrest:hamcrest-all:$hamcrestVersion"
@@ -72,4 +72,6 @@ dependencies {
     testImplementation "org.robolectric:robolectric:$robolectricVersion"
     testImplementation "androidx.arch.core:core-testing:$archTestingVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+
+    testImplementation "androidx.fragment:fragment-testing:$fragmentVersion"
 }
