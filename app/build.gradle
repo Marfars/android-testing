@@ -26,9 +26,10 @@ android {
         enabledForTests = true
     }
     packagingOptions {
-        exclude 'META-INF/DEPENDENCIES'
-        pickFirst 'META-INF/AL2.0'
-        pickFirst 'META-INF/LGPL2.1'
+        exclude "**/attach_hotspot_windows.dll"
+        exclude "META-INF/licenses/**"
+        exclude "META-INF/AL2.0"
+        exclude "META-INF/LGPL2.1"
     }
 }
 
@@ -81,4 +82,11 @@ dependencies {
     debugImplementation  "androidx.fragment:fragment-testing:$fragmentVersion"
 
     androidTestImplementation "androidx.test:core:$androidXTestCoreVersion"
+
+    // Dependencies for Android instrumented unit tests
+    androidTestImplementation "org.mockito:mockito-core:$mockitoVersion"
+
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:$dexMakerVersion"
+
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
 }
